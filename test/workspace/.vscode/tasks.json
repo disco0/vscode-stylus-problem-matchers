@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Manual Matcher",
+            "command": "stylus --print ${workspaceFolder}/*.styl",
+            "type": "shell",
+    
+            "problemMatcher": [
+            {
+                "applyTo": "allDocuments",
+
+                "fileLocation": [
+                    "autodetect",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "(?:^[ ]*(?:(?:[\\[])?((?:Parse)?Error): *)(((?!stdin)\\S(?:[^\\n:\\\\]+|(?:\\\\.)+)+)(?::(\\d+)(?::(\\d+))?)?) *$)",
+                    "file": 3,
+                    "line": 4,
+                    "column": 5,
+                    "message": 2
+                }
+            }],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Test Extension Configuration",
+            "command": "stylus --print ${workspaceFolder}/*.styl",
+            "type": "shell",
+    
+            "problemMatcher": [ "$stylus" ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "name": "vscode-stylus-problem-matchers",
+    "displayName": "Stylus Problem Matchers",
+    "publisher": "disk0",
+    "description": "Provides problem matchers for stylus compilation in VS Code tasks",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "problem matcher",
+        "tasks"
+    ],
+    "author": {
+        "name": "disco0",
+        "url": "https://github.com/disco0/stylus-problem-matchers"
+    },
+    "extensionKind": [
+        "workspace",
+        "ui"
+    ],
+    "contributes": {
+        "problemMatchers": [
+            {
+                "applyTo": "allDocuments",
+                "label": "stylus",
+                "name": "stylus",
+
+                "fileLocation": [
+                    "autodetect",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "(?:^[ ]*(?:(?:[\\[])?((?:Parse)?Error): *)(((?!stdin)\\S(?:[^\\n:\\\\]+|(?:\\\\.)+)+)(?::(\\d+)(?::(\\d+))?)?) *$)",
+                    "file": 3,
+                    "line": 4,
+                    "column": 5,
+                    "message": 2
+                }
+            }
+        ]
+    },
+    "scripts": {},
+    "devDependencies": {
+        "@tsconfig/node14": "^1.0.0",
+        "@types/node": "^14.0.27",
+        "@types/vscode": "^1.49.0"
+    },
+    "disabled": {
+        "scripts": {
+            "vscode:prepublish": "yarn run compile",
+            "compile": "tsc -p ./",
+            "lint": "eslint src --ext ts",
+            "watch": "tsc -watch -p ./",
+            "pretest": "yarn run compile && yarn run lint",
+            "test": "node ./out/test/runTest.js"
+        },
+        "devDependencies": {
+            "eslint": "^7.9.0",
+            "@typescript-eslint/eslint-plugin": "^4.1.1",
+            "@typescript-eslint/parser": "^4.1.1",
+            "glob": "^7.1.6",
+            "mocha": "^8.1.3",
+            "@types/glob": "^7.1.3",
+            "@types/mocha": "^8.0.0"
+        }
+    }
+}

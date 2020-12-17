@@ -1,0 +1,55 @@
+/usr/local/lib/node_modules/stylus/bin/stylus:685
+              throw err;
+              ^
+
+[Error: /Users/user/path/to/stylus/file/invalid.styl:34:5
+   30| ==/UserStyle== */
+   31| 
+   32| @-moz-document regexp("https?://(www\\.)?typescriptlang.org/(v2/)?docs.*$"),
+   33| 	           regexp("https?://(www\\.)?(staging-)?typescript\\.org/docs/.*$")
+   34|     error("compile error")
+-----------^
+   35| 
+
+compile error
+] {
+  fromStylus: true,
+  lineno: 34,
+  column: 5,
+  filename: '/Users/disk0/git.local/stylus-stylus/static/test/testFiles/invalid.styl',
+  stylusStack: '',
+  input: '/* ==UserStyle==\n' +
+    '@name           TypeScript Docs\n' +
+    '@description    Expands width of code blocks and moves navigation bar fully to the left\n' +
+    '@version        0.0.12\n' +
+    '@namespace      github.com/disk0/stylus/typescript.org/docs\n' +
+    '\n' +
+    '@author         disk0 (github.com/disco0)\n' +
+    '@license        MIT\n' +
+    '\n' +
+    '@preprocessor   stylus\n' +
+    '\n' +
+    '@var select     CodeFont "Font for code displayed on page." [\n' +
+    '  "Iosevka Extended*",\n' +
+    '  "Iosevka Expanded",\n' +
+    '  "Iosevka Term",\n' +
+    '  "Iosevka",\n' +
+    '\n' +
+    '  "SemanticHaskell",\n' +
+    '  "SemanticJavascript",\n' +
+    '  "SemanticCode",\n' +
+    '  "Hasklig",\n' +
+    '\n' +
+    '  "PragmataPro Mono Liga",\n' +
+    '\n' +
+    '  "monospace"\n' +
+    ']\n' +
+    '@var number     CodeFontSize   "Size of code in documentation"          [ 14, 1, 500, 1, "px" ]\n' +
+    '@var number     CodeFontWeight "Code font weight"                       [ 400, 100, 900, 100 ]\n' +
+    '@var number     DocTextWidth   "Width of text content in documentation" [ 1000, 300, 5000, 100, "px" ]\n' +
+    '==/UserStyle== */\n' +
+    '\n' +
+    '@-moz-document regexp("https?://(www\\\\.)?typescriptlang.org/(v2/)?docs.*$"),\n' +
+    '\t           regexp("https?://(www\\\\.)?(staging-)?typescript\\\\.org/docs/.*$")\n' +
+    '    error("compile error")\n'
+}
