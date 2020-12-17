@@ -5,7 +5,10 @@
     "description": "Provides problem matchers for stylus compilation in VS Code tasks",
     "version": "0.0.1",
     "engines": {
-        "vscode": "^1.49.0"
+        "vscode": "^1.10.0"
+    },
+    "repository": {
+        "url": "git@github.com:disco0/vscode-stylus-problem-matchers.git"
     },
     "categories": [
         "Other"
@@ -16,7 +19,7 @@
     ],
     "author": {
         "name": "disco0",
-        "url": "https://github.com/disco0/stylus-problem-matchers"
+        "url": "https://github.com/disco0"
     },
     "extensionKind": [
         "workspace",
@@ -47,7 +50,7 @@
     "devDependencies": {
         "@tsconfig/node14": "^1.0.0",
         "@types/node": "^14.0.27",
-        "@types/vscode": "^1.49.0"
+        "@types/vscode": "^1.10.0"
     },
     "disabled": {
         "scripts": {
